@@ -1,0 +1,23 @@
+[
+  {
+    "nombre": "Karen",
+    "apellido": "Lettieri",
+    "edad": 23,
+    "curso": "Backend",
+    "id": 1
+  },
+  {
+    "nombre": "Karen",
+    "apellido": "Lettieri",
+    "edad": 23,
+    "curso": "Backend",
+    "id": 2
+  },
+  {
+    "nombre": "Karen",
+    "apellido": "Lettieri",
+    "edad": 23,
+    "curso": "Backend",
+    "id": 3
+  }
+]

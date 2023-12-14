@@ -1,0 +1,18 @@
+<h2>Lista de productos</h2>
+<h4>Hola {{users.name}}</h4>
+
+{{#if isAdmin}}
+  {{#each products}}
+    <div>
+      <p>Nombre: {{this.name}}</p>
+      <p>Precio: {{this.price}}</p>
+
+      <hr>
+    </div>
+
+  {{/each}}
+{{else}}
+  <p>Lo siento no tienes autorización</p>
+{{/if}}
+
+<script src="/js/index.js"></script>

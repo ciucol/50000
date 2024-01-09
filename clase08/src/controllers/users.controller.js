@@ -20,7 +20,7 @@ router.get('/:id', convertToNumber, (req, res) => {
 })
 
 router.post('/', uploader.single('img'), (req, res) => {
-  const { id, name, lastname, email, file } = req.body
+  const { name, lastname, email, file } = req.body
 
   const pathFile = req.file.path
 
@@ -36,4 +36,4 @@ router.post('/', uploader.single('img'), (req, res) => {
   res.json({ payload: users })
 })
 
-module.exports = router
+module.exports = users

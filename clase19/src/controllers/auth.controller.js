@@ -22,13 +22,27 @@ router.post('/', async (req, res) => {
       email: user.email,
     }
 
-    res.json({ status: 'success', message: 'Login succesful' })
+    res.redirect('/profile')
   } catch (error) {
     console.log(error)
     res
       .status(500)
       .json({ status: 'success', message: 'Internal Server Error' })
   }
+})
+
+router.get('/logout', (req, res) => {
+  console.log('logout')
+  req.session.destroy(err => {
+    if (err) {
+      console.log('err')
+      console.log(err)
+      return res.json({ error: err })
+    }
+
+    console.log('redirect')
+    res.redirect('/login')
+  })
 })
 
 module.exports = router

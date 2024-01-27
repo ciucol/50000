@@ -13,7 +13,6 @@ router.post('/', async (req, res) => {
       email,
       password,
     }
-    console.log('🚀 ~ router.post ~ newUserInfo:', newUserInfo)
 
     const user = await Users.create(newUserInfo)
 

@@ -10,7 +10,10 @@ const userSchema = new mongoose.Schema({
     unique: true,
   },
   password: String,
-  role: String,
+  role: {
+    type: String,
+    default: 'user',
+  },
 })
 
 const Users = mongoose.model(userCollection, userSchema)

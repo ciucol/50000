@@ -1,4 +1,4 @@
-const form = document.getElementById('signupForm')
+const form = document.getElementById('forgotPassword')
 
 form.addEventListener('submit', e => {
   e.preventDefault()
@@ -7,18 +7,13 @@ form.addEventListener('submit', e => {
   const obj = {}
 
   data.forEach((value, key) => (obj[key] = value))
-
-  const url = '/users'
-  const headers = {
-    'Content-Type': 'application/json',
-  }
-  const method = 'POST'
-  const body = JSON.stringify(obj)
-
-  fetch(url, {
-    headers,
-    method,
-    body,
+  console.log('sending')
+  fetch('/auth/forgot-password', {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    method: 'POST',
+    body: JSON.stringify(obj),
   })
     .then(response => response.json())
     .then(data => console.log(data))

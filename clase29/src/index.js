@@ -1,7 +1,11 @@
 const express = require('express')
+const { port } = require('./configs/app.config')
+const router = require('./router')
 
 const app = express()
 
-app.listen(3000, () => {
-  console.log(3000)
+router(app)
+
+app.listen(port, () => {
+  console.log(port)
 })

@@ -23,7 +23,9 @@ class BusinessMongoDao {
 
   async create(info) {
     try {
+      console.log('llega Dao')
       const result = await Business.create(info)
+      console.log('🚀 ~ BusinessMongoDao ~ create ~ result:', result)
       return result
     } catch (error) {
       console.log(error)

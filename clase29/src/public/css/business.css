@@ -1,0 +1,75 @@
+body {
+  background: #e7eff6; /* un azul claro para el fondo */
+  color: #333;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #0056b3; /* un tono de azul más oscuro para los títulos */
+}
+
+ol {
+  padding-left: 0;
+  list-style: none;
+}
+
+ol > li {
+  background: #fff;
+  border-left: 4px solid #007bff; /* un tono azul de Bootstrap */
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+ul > li {
+  padding: 5px 0;
+}
+
+/* Botones y enlaces en tonos azules */
+a {
+  color: #007bff;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Elementos de formulario con tonos azules */
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Estilos responsivos con puntos de interrupción de Bootstrap */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Personaliza más estilos aquí */

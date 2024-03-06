@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const orderCollection = 'order'
 
 const orderSchema = new mongoose.Schema({
-  number: String,
+  orderId: String,
   business: {
     type: mongoose.SchemaTypes.ObjectId,
     ref: 'business',

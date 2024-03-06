@@ -8,4 +8,5 @@ const businessSchema = new mongoose.Schema({
 })
 
 const Business = mongoose.model(businessCollection, businessSchema)
+
 module.exports = Business

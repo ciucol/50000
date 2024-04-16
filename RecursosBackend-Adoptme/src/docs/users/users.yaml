@@ -1,0 +1,56 @@
+openapi: "3.0.3"
+info:
+  title: API Users
+  version: "1.0"
+paths:
+  /api/users/:
+    get:
+      summary: Obtienes todos los usuarios
+      tags:
+        - users
+      responses:
+        "200":
+          description: Todos los usuarios han sido obtenidos
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/User"
+    post:
+      tags:
+        - users
+      requestBody:
+        description: Create a new pet in the store
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+        required: true
+
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: Id de mongo
+        first_name:
+          type: string
+          description: Nombre del usuario
+        last_name:
+          type: string
+          description: Apellido del usuario
+        email:
+          type: string
+          description: Correo electrónico
+        password:
+          type: string
+          description: Contraseña
+      example:
+        _id: ObjectId("hydas78dyas8ndhas8")
+        first_name: Mate
+        last_name: Naran
+        email: mate@naran.com
+        password: lsiunechro8w7hc4rnowa87fdnweh8df7weh
